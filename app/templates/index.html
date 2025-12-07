@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OmniWeave</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="/static/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-glob"></div>
+    <div class="container">
+        <header>
+            <div class="logo">🕸️ OmniWeave</div>
+            <p class="subtitle">Weave the web into structured data.</p>
+        </header>
+
+        <div class="input-card">
+            <div class="input-group">
+                <input type="text" id="urlInput" placeholder="https://example.com" value="https://example.com" />
+                <button id="scrapeBtn">
+                    <span>Scrape Now</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+            <div id="loading" class="hidden">
+                <div class="spinner"></div>
+                <span>Analyzing target...</span>
+            </div>
+            <div id="error" class="hidden"></div>
+        </div>
+
+        <div id="result" class="hidden">
+            <div class="meta-card">
+                <div class="meta-info"></div>
+                <button id="downloadBtn" class="secondary-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Download JSON
+                </button>
+            </div>
+            <div id="sections"></div>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+
+</html>
